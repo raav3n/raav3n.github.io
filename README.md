@@ -1,3 +1,5 @@
-# raav3n.github.io
+# Protfolio page
 
-Temp Portfolio Website for CECS 105 
+Was a temporary Portfolio Website for CECS 105... now work in progress
+
+site is [frankmancia.com](https://frankmancia.com)
