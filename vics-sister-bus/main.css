@@ -254,12 +254,13 @@ footer
     justify-content: center;
     align-items: center;
     gap: 45%;
-    padding-top: 5em;
+    padding: 5em 2em 0em 2em;
 }
 
 .f-columns > .row
 {
     max-width: 45%;
+    text-align: center;
 }
 
 .f-columns h4
@@ -276,7 +277,7 @@ footer
     font-size: 1.1rem;
 }
 
-@media only screen and (max-width:800px)
+@media only screen and (max-width:1150px)
 {
     #open-menu
     {

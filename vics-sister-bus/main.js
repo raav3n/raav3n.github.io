@@ -20,7 +20,8 @@ let openMenu = document.getElementById("open-menu");
 let closeMenu = document.getElementById("close-menu");
 let nav = document.getElementById("menuList");
 let navElements = document.getElementById("menuList").children;
-let container =  document.getElementById("content");
+let container =  document.getElementById("content")
+let section = document.querySelector('.section');
 
 const handleMenu = (id) =>
 {
@@ -63,9 +64,9 @@ function resize() //reset content if size is for whatever reason changed
 {
     var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
-    console.log("P: " + Pwidth + "  W: " + width);
+    // console.log("P: " + Pwidth + "  W: " + width);
 
-    if ( width > 800 && Pwidth < 800 ) //bigger sizes
+    if ( width > 1150 && Pwidth < 1150 ) //bigger sizes
     {
         openMenu.style.display = "none";
         closeMenu.style.display = "none";
@@ -74,7 +75,7 @@ function resize() //reset content if size is for whatever reason changed
 
         Pwidth = width;
     }
-    else if ( width < 800  && Pwidth > 800 ) // mobile size
+    else if ( width < 1150  && Pwidth > 1150 ) // mobile size
     {
         openMenu.style.display = "block";
         closeMenu.style.display = "none";
@@ -85,11 +86,31 @@ function resize() //reset content if size is for whatever reason changed
     }
 }
 
+let animated = false;
 
-const elementInView = (el) => {
-    const elementTop = el.getBoundingClientRect().top;
-   
-    return (
-      elementTop <= (window.innerHeight || document.documentElement.clientHeight)
-    );
-  };
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !animated) {
+          anime({
+            targets: document.querySelector('.section .row ul'),
+            translateX: ["200%","0%"],
+            duration: 1200,
+            direction: 'reversed',
+            easing:'easeInOutQuad',
+          });
+
+          anime({
+            targets: document.querySelector('.section .row img'),
+            translateX: ["-200%","0%"],
+            duration: 1200,
+            direction: 'reversed',
+            easing:'easeInOutQuad',
+          });
+
+          animated = true;
+        }
+      });
+});
+
+
+observer.observe(document.querySelector('.section .row'));
