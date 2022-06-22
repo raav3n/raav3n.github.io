@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+*{
+    margin : 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#open-menu, #close-menu 
+{
+    display: none;
+}
+
+.heading-container
+{
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.heading-container
+{
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    -webkit-box-shadow: inset 0 8px 4px -4px #ddd;
+    -moz-box-shadow: inset 0 8px 4px -4px #ddd;
+    box-shadow: inset 0 8px 4px -4px #ddd;
+}
+
+.navbar
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.title 
+{
+    font-family: 'Indie Flower', cursive;
+    max-width: 20rem;
+    cursor: pointer;
+    margin: 30px 0;
+}
+
+#open-icon, #close-icon
+{
+    width: 25px;
+    cursor: pointer;
+}
+
+nav
+{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li
+{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a
+{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 100;
+}
+
+nav ul li a:hover
+{
+    color: #339966;
+}
+
+.jumbo-screen
+{
+    max-width: 100%;
+    max-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+    z-index: -1;
+}
+
+.jumbo-screen h2
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+
+    font-size: 3rem;
+    font-family: 'Indie Flower', cursive;
+}
+
+.jumbo-img
+{
+    min-width: 100vw;
+    min-height: 10vh;
+
+    /* background-image: url("images/jumbo-img.jpg"); */
+    /* background-size: cover; */
+    filter: blur(1px);
+}
+
+
+@media only screen and (max-width:700px)
+{
+    #open-menu
+    {
+        display: block;
+        width: 2rem;
+        z-index: 2;
+    }
+
+    #close-menu
+    {
+        width: 2rem;
+        z-index: 2;
+    }
+
+    nav ul
+    {
+        visibility: hidden;
+        background-color: #339966;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        min-height: 100vh;
+        min-width: 100vw;
+
+        overflow: hidden;  
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    nav ul li 
+    {
+        padding-bottom: 2rem;
+    }
+}
+
+.sectionOne
+{
+    min-height: 50rem;
+    background-color: #ffffe6;
+}
+
+.sectionOne h2
+{
+    text-align: center;
+    padding-top: 2em;
+    font-family: 'Indie Flower', cursive;
+    font-size: 2rem;
+}
