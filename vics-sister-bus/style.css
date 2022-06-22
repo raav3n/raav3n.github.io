@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+*{
+    margin : 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container
+{
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.navbar
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.title 
+{
+    font-family: 'Indie Flower', cursive;
+    max-width: 20rem;
+    cursor: pointer;
+    margin: 30px 0;
+}
+
+#open-icon, #close-icon
+{
+    width: 25px;
+    cursor: pointer;
+}
+
+nav
+{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li
+{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a
+{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 100;
+}
+
+nav ul li a:hover
+{
+    color: #339966;
+}
+
+
+.jumbo-screen
+{
+    max-width: 100%;
+    max-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+    z-index: -1;
+}
+
+.jumbo-screen h2
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+
+    font-size: 3rem;
+    font-family: 'Indie Flower', cursive;
+}
+
+.jumbo-img
+{
+    min-width: 100%;
+    min-height: 100%;
+
+    background-image: url("images/jumbo-img.jpg");
+    background-position: center;
+    filter: blur(1px);
+}
+
+.sectionOne
+{
+    height: 100px;
+    background-color: #000;
+}
