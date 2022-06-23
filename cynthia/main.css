@@ -12,11 +12,6 @@
     -webkit-font-smoothing: antialiased;
 }
 
-body
-{
-    position: relative;
-}
-
 #open-menu, #close-menu 
 {
     display: none;

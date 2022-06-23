@@ -21,7 +21,8 @@ let closeMenu = document.getElementById("close-menu");
 let nav = document.getElementById("menuList");
 let navElements = document.getElementById("menuList").children;
 let container =  document.getElementById("content")
-let section = document.querySelector('.section');
+let section = document.querySelector('.section')
+let overflowDiv = document.getElementById('ios-overflow');
 
 const handleMenu = (id) =>
 {
@@ -31,7 +32,8 @@ const handleMenu = (id) =>
     {
         closeMenu.style.display = "block";
         nav.style.visibility = "visible";
-        document.body.style.overflow = 'hidden';
+        overflowDiv.style.overflow = 'hidden';
+        overflowDiv.style.position = 'fixed';
 
         anime({
             targets: navElements,
@@ -51,7 +53,8 @@ const handleMenu = (id) =>
     {
         openMenu.style.display = "block";
         nav.style.visibility = "hidden";
-        document.body.style.overflow = 'visible';
+        overflowDiv.style.overflow = 'visible';
+        overflowDiv.style.position = 'relative';
     }
 
     //window.getComputedStyle(document.getElementById(id)).display
@@ -71,7 +74,9 @@ function resize() //reset content if size is for whatever reason changed
         openMenu.style.display = "none";
         closeMenu.style.display = "none";
         nav.style.visibility = "visible";
-        document.body.style.overflow = 'visible';
+        overflowDiv.style.overflow = 'visible';
+        overflowDiv.style.position = 'relative';
+
 
         Pwidth = width;
     }
@@ -80,7 +85,8 @@ function resize() //reset content if size is for whatever reason changed
         openMenu.style.display = "block";
         closeMenu.style.display = "none";
         nav.style.visibility = "hidden";
-        document.body.style.overflow = 'visible';
+        overflowDiv.style.overflow = 'visible';
+        overflowDiv.style.position = 'relative';
 
         Pwidth = width;
     }
