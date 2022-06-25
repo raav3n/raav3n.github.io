@@ -223,22 +223,22 @@ nav ul li a:hover
     color: #fff
 }
 
-.occassion-list button:hover::after
+.occassion-list button:hover
 {
-    content: "";
-    position: absolute;
-    background-color: #000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-    /* transition:   0.2s ease-in-out; */
+    /* border-right-width: 2em; */
+    border-left-width: 3em;
+    border-color: none;
+    transition: .5s ease-in;
 }
 
 .occassion-list a
 {
     font-size: 1.35em;
+}
+
+.section .row ul, .section .row img
+{
+    opacity: 0;
 }
 
 footer
@@ -252,9 +252,9 @@ footer
 {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 45%;
+    gap: 30%;
     padding: 5em 2em 0em 2em;
+    opacity: 0;
 }
 
 .f-columns > .row
@@ -277,6 +277,28 @@ footer
     font-size: 1.1rem;
 }
 
+.f-columns ul
+{
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.f-columns ul > li
+{
+    align-self: left;
+    padding-bottom: 0.5em;
+    list-style: none;
+    color: #fff;
+}
+
+.f-columns .row img
+{
+    padding-top: 1em;
+    max-width: 5%;
+    filter: invert(100%);
+}
+
 @media only screen and (max-width:1150px)
 {
     #open-menu
@@ -292,6 +314,10 @@ footer
         z-index: 2;
     }
 
+    .heading-container{
+        min-width: 100vw;
+    }
+
     nav ul
     {
         visibility: hidden;
@@ -303,7 +329,7 @@ footer
         align-items: center;
 
         min-height: 100vh;
-        min-width: 100vw;
+        min-width: 100%;
 
         overflow: hidden;  
         position: absolute;
@@ -359,8 +385,7 @@ footer
         display: flex;
         justify-content: center;
         flex-direction: column;
-        align-items: center;
-        padding: 5rem 8% 5rem 8%;
+        padding: 5rem 8% 0rem 8%;
     }
 
     .f-columns > .row 
@@ -370,5 +395,19 @@ footer
         text-align: center;
     }
 
+    .f-columns .row img
+    {
+        max-width: 6%;
+    }
+
+
 }
 
+@media only screen and (max-width:400px)
+{
+    .f-columns .row img
+    {
+        max-width: 12%;
+    }
+
+}

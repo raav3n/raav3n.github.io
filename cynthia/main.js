@@ -92,14 +92,15 @@ function resize() //reset content if size is for whatever reason changed
     }
 }
 
-let animated = false;
+let animatedOccassion = false;
 
-const observer = new IntersectionObserver(entries => {
+const Occassionobserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        if (entry.isIntersecting && !animated) {
+        if (entry.isIntersecting && !animatedOccassion) {
           anime({
             targets: document.querySelector('.section .row ul'),
             translateX: ["200%","0%"],
+            opacity: [0,1],
             duration: 1200,
             direction: 'reversed',
             easing:'easeInOutQuad',
@@ -108,15 +109,39 @@ const observer = new IntersectionObserver(entries => {
           anime({
             targets: document.querySelector('.section .row img'),
             translateX: ["-200%","0%"],
+            opacity: [0,1],
             duration: 1200,
             direction: 'reversed',
             easing:'easeInOutQuad',
           });
 
-          animated = true;
+          animatedOccassion = true;
         }
       });
 });
 
 
-observer.observe(document.querySelector('.section .row'));
+let animatedFooter = false;
+
+Occassionobserver.observe(document.querySelector('.section .row'));
+
+const footerobserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !animatedFooter) {
+          anime({
+            targets: document.querySelector('.f-columns'),
+            translateY: ["200%","0%"],
+            opacity: [0,1],
+            duration: 1200,
+            direction: 'reversed',
+            easing:'easeInOutQuad',
+          });
+
+
+          animatedFooter = true;
+        }
+      });
+});
+
+
+footerobserver.observe(document.querySelector('.f-columns'));
