@@ -183,7 +183,7 @@ nav ul li a:hover
 {
     max-height: 80%;
 
-    border-radius: 5px;
+    border-radius: 0%;
     box-shadow: 4px 5px 15px #000;
 }
 
@@ -384,8 +384,9 @@ footer
     {
         display: flex;
         justify-content: center;
+        align-items: center;
         flex-direction: column;
-        padding: 5rem 8% 0rem 8%;
+        padding: 5rem 0% 0rem 0%;
     }
 
     .f-columns > .row 
@@ -410,4 +411,28 @@ footer
         max-width: 12%;
     }
 
+}
+
+
+/*
+*
+*   FAQ CSS
+*
+*/
+body{
+    width: 100%;
+}
+.faq-header
+{
+    display: block;
+    min-width: 100%;
+    min-height: 50vh;
+    overflow: hidden;
+    background-color: #77a78f;
+}
+.faq-header .title
+{
+    min-width: 100%;
+    display: block;
+    align-items: center;
 }
