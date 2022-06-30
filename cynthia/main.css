@@ -43,7 +43,7 @@
     font-family: 'Indie Flower', cursive;
     max-width: 20rem;
     cursor: pointer;
-    margin: 30px 0;
+    padding: 30px 0;
 }
 
 #open-icon, #close-icon
@@ -106,20 +106,6 @@ nav ul li a:hover
     overflow: hidden;
     z-index: -1;
 }
-
-/* .jumbo-screen h2
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 2;
-    text-align: center;
-    opacity: 0;
-
-    font-size: 3rem;
-    font-family: 'Indie Flower', cursive;
-} */
-
 .jumbo-screen .logo
 {
     max-width: 80%;
@@ -299,6 +285,103 @@ footer
     filter: invert(100%);
 }
 
+/*
+*
+*   FAQ CSS
+*
+*/
+.img-cover{
+    background: url("images/jumbo-img.jpg") no-repeat top center fixed;
+    background-size: cover;
+    min-height: 50vh;
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+.page-name
+{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page-name h2
+{
+    font-size: 3rem;
+}
+.questions
+{
+    padding-top: 2em;
+    padding-bottom: 2em;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+.questions > .row
+{
+    padding-top: 2em;
+}
+
+.questions > .row h3
+{
+    min-width: 30%;
+    font-size: 1.25rem;
+}
+.questions > .row p
+{
+    font-size: 1.2rem;
+}
+
+.about-nav
+{
+    min-height: 10vh;
+    width: 100%;
+}
+.about
+{
+    min-width: 100%;
+    min-height: 90vh;
+}
+.about img
+{
+    width: auto;
+    max-height: 60vh;
+    /* max-width: auto; */
+    margin-left: 10em;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #000;
+}
+
+/* .about::after
+{
+    content: " ";
+    position: absolute;
+    left: 5%;
+    bottom: 40%;
+    z-index: -2;
+    width: 60vw;
+    min-height: 60vh;
+    border-radius: 10px;
+    background: linear-gradient(to top right, #ff9999 0%, #66ccff 100%);
+} */
+.about::before
+{
+    content: " ";
+    position: absolute;
+    left: 0%;
+    bottom: 40%;
+    z-index: -1;
+    width: 45vw;
+    min-height: 70vh;
+    border-radius: 10px;
+    background: linear-gradient(to top right, #ff9999 0%, #66ccff 100%);
+    transform: rotate(70deg);
+}
+
 @media only screen and (max-width:1150px)
 {
     #open-menu
@@ -401,6 +484,15 @@ footer
         max-width: 6%;
     }
 
+    .questions .row > p
+    {
+        padding-top: 1em;
+    }
+
+    .container .questions > .row
+    {
+        padding-top: 0%;
+    }
 
 }
 
@@ -411,28 +503,15 @@ footer
         max-width: 12%;
     }
 
+    #close-menu
+    {
+        padding-right: 4em;
+    }
+
 }
 
 
-/*
-*
-*   FAQ CSS
-*
-*/
-body{
-    width: 100%;
-}
-.faq-header
-{
-    display: block;
-    min-width: 100%;
-    min-height: 50vh;
-    overflow: hidden;
-    background-color: #77a78f;
-}
-.faq-header .title
-{
-    min-width: 100%;
-    display: block;
-    align-items: center;
-}
+
+
+
+

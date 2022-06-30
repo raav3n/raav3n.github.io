@@ -36,6 +36,14 @@ const handleMenu = (id) =>
         overflowDiv.style.position = 'fixed';
 
         anime({
+            targets: nav,
+            opacity : {
+                value: [0,1],
+                duration: 1500,
+            }
+        });
+
+        anime({
             targets: navElements,
             opacity: {
                 value: [0,1],
@@ -51,10 +59,32 @@ const handleMenu = (id) =>
     }
     else 
     {
+        anime({
+            targets: navElements,
+            opacity: {
+                value: [1,0],
+                duration: 1000,
+            },
+            translateY: {
+                value: "80%",
+                duration: 700,
+            },
+            direction: 'normal',
+            easing: 'easeInOutQuad',
+        });
+
+        anime({
+            targets: nav,
+            opacity : {
+                value: [1,0],
+                duration: 1500,
+            }
+        });
+
         openMenu.style.display = "block";
-        nav.style.visibility = "hidden";
         overflowDiv.style.overflow = 'visible';
         overflowDiv.style.position = 'relative';
+        
     }
 
     //window.getComputedStyle(document.getElementById(id)).display
