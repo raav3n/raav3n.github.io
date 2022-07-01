@@ -175,3 +175,5 @@ const footerobserver = new IntersectionObserver(entries => {
 
 
 footerobserver.observe(document.querySelector('.f-columns'));
+
+document.getElementById("progress-bar").setAttribute("data-before", "10%");

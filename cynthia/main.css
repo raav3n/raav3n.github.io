@@ -344,6 +344,15 @@ footer
 {
     min-width: 100%;
     min-height: 90vh;
+
+    display: flex;
+    /* justify-content: center; */
+    gap: 10%;
+}
+
+.about .row
+{
+    padding-right: 5em;
 }
 .about img
 {
@@ -380,6 +389,43 @@ footer
     border-radius: 10px;
     background: linear-gradient(to top right, #ff9999 0%, #66ccff 100%);
     transform: rotate(70deg);
+}
+
+/*
+*
+*   BOOK CSS
+*
+*/
+#progress-bar
+{
+    min-width: 100%;
+    min-height: 8em;
+}
+#progress-bar::after
+{
+    content: attr(data-before) "0%";
+    position: absolute;
+    text-align: center;
+    min-width: 80%;
+    color: #000;
+    margin-top: 2em;
+    border-radius: 10px;
+    padding: 0.25em;
+    border-color: #000;
+    border-style: solid;
+    border-width: 3px;
+}
+#progress-bar::before   
+{
+    content: " ";
+    position: absolute;
+    background-color: #82b59b;
+    min-width: 80%;
+    color: #000;
+    height: 1.5em;
+    margin-top: 2em;
+    border-radius: 10px;
+    padding: 0.25em;
 }
 
 @media only screen and (max-width:1150px)
@@ -492,6 +538,33 @@ footer
     .container .questions > .row
     {
         padding-top: 0%;
+    }
+
+    .about
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 50%;
+    }
+
+    .about::before
+    {
+        content: " ";
+        position: absolute;
+        left: 15%;
+        bottom: 15%;
+        z-index: -1;
+        width: 40em;
+        min-height: 40em;
+        border-radius: 50%;
+        background: linear-gradient(to top right, #ff9999 0%, #66ccff 100%);
+        transform: rotate(70deg);
+        box-sizing: border-box;
+    }
+
+    .about .row
+    {
+        align-content: center;
     }
 
 }
