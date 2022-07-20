@@ -343,26 +343,38 @@ footer
 .about
 {
     min-width: 100%;
-    min-height: 90vh;
+    height: 33vh;
+    position: relative;
 
     display: flex;
     /* justify-content: center; */
-    gap: 10%;
+    /* gap: 10%; */
+}
+#about
+{
+    margin-top: 2em;
 }
 
 .about .row
 {
-    padding-right: 5em;
+    /* padding-right: 5em; */
+    position: absolute;
+    left: 50%;
+    top: 30%;;
 }
 .about img
 {
-    width: auto;
-    max-height: 60vh;
+    max-width: 50vw;
+    max-height: 40vh;
     /* max-width: auto; */
-    margin-left: 10em;
-    border-style: solid;
+    /* margin-left: 10em; */
+    /* border-style: solid;
     border-width: 5px;
-    border-color: #000;
+    border-color: #000; */
+    /* align-self: baseline; */
+    position: absolute;
+    bottom:0;
+    left: 5%;
 }
 
 /* .about::after
@@ -381,14 +393,14 @@ footer
 {
     content: " ";
     position: absolute;
-    left: 0%;
-    bottom: 40%;
+    left: -20%;
+    top: -50%;
     z-index: -1;
-    width: 45vw;
-    min-height: 70vh;
-    border-radius: 10px;
+    min-width: 150%;
+    min-height: 49.6vh;
+    border-radius: 42% 58% 100% 0% / 0% 92% 8% 100% ;
     background: linear-gradient(to top right, #ff9999 0%, #66ccff 100%);
-    transform: rotate(70deg);
+    transform: scaleX(-1) rotate(180deg);
 }
 
 /*
@@ -396,6 +408,10 @@ footer
 *   BOOK CSS
 *
 */
+.section #form
+{
+    height: 1em;
+}
 #progress-bar
 {
     min-width: 100%;
@@ -426,6 +442,24 @@ footer
     margin-top: 2em;
     border-radius: 10px;
     padding: 0.25em;
+}
+
+form
+{
+    min-width: 100%;
+    align-items: center;
+}
+
+form div > input
+{
+    min-width: 50%;
+    min-height: 3em;
+    border-color: #000;
+    /* border-radius: 3px; */
+    border-width: 1px;
+    padding-left: 1em;
+    font-size: 1rem;
+    letter-spacing: 1px;
 }
 
 @media only screen and (max-width:1150px)
@@ -544,27 +578,29 @@ footer
     {
         display: flex;
         flex-direction: column;
-        gap: 50%;
     }
 
     .about::before
     {
         content: " ";
         position: absolute;
-        left: 15%;
-        bottom: 15%;
-        z-index: -1;
-        width: 40em;
-        min-height: 40em;
-        border-radius: 50%;
+        width: 60em;
+        min-height: 80vh;
+        border-radius: 42% 58% 100% 0% / 0% 92% 8% 100% ;
         background: linear-gradient(to top right, #ff9999 0%, #66ccff 100%);
-        transform: rotate(70deg);
-        box-sizing: border-box;
+    }
+
+    .about img
+    {
+        position: absolute;
+        bottom: 0;
     }
 
     .about .row
     {
         align-content: center;
+        padding-top: 20%;
+        padding-left: 10%;
     }
 
 }
