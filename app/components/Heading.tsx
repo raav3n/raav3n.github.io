@@ -22,7 +22,7 @@ export default function Heading(){
                 <div className="row-end-5 text-wrap m-5 md:ml-0">
                     <p className="text-3xl font-semibold">About Me</p>
                     <p className="text-xl mt-3">Graduated from <a href="https://www.csulb.edu" className="hover:text-yellow-300">CSULB </a> 
-                    with a B.S. in Computer Science and a minor Cyber Security Applications. Interesting in cybersecurity, cloud, and software development.</p>
+                    with a B.S. in Computer Science and a minor Cyber Security Applications. Interested in cybersecurity, cloud, and software development.</p>
                 </div>
             </div>
             
