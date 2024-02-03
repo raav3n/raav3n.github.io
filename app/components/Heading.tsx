@@ -17,10 +17,10 @@ export default function Heading(){
                 <img src="/images/me.jpeg"alt='Frank Image'  className="rounded-full" />
             </div>
             
-            <div className="h-1/2 md:w-1/2 grid grid-rows-5 grid-col-3 place-items-center md:place-items-start font-sans">
-                <p className='row-start-1 row-start-2 text-6xl'>Hi,<br></br> I&#39;m <span className="text-yellow-100">Frank Mancia</span></p>
-                <div className="row-end-5 text-wrap m-5 md:ml-0">
-                    <p className="text-3xl font-semibold">About Me</p>
+            <div className="h-1/2 md:w-1/2 grid grid-rows-4 grid-col-3 place-items-center md:place-items-start font-sans">
+                <p className='md:row-start-2 row-end-2 text-6xl ml-5 mt-10 md:ml-0 md:mt-0'>Hi,<br></br> I&#39;m <span className="text-yellow-100">Frank Mancia</span></p>
+                <div className="md:row-start-3 row-start-3 text-wrap m-5 md:ml-0 mb-5">
+                    <p className="text-3xl font-semibold mt-16 sm:mt-5 md:mt-10 lg:mt-0">About Me</p>
                     <p className="text-xl mt-3">Graduated from <a href="https://www.csulb.edu" className="hover:text-yellow-300">CSULB </a> 
                     with a B.S. in Computer Science and a minor Cyber Security Applications. Interested in cybersecurity, cloud, and software development.</p>
                 </div>
