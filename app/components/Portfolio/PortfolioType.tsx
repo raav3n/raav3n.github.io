@@ -1,7 +1,12 @@
 export interface PortfolioType
 {
-    title: String;
-    tools: Array<String>;
-    image?: String;
-    link?: boolean;
+    style_bg_color?: string;
+
+    title: string;
+    description: string;
+    tools: Array<string>;
+    image?: string;
+
+    link?: string;
+    date: Date;
 }
