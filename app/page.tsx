@@ -6,7 +6,7 @@ export default function Home() {
     <main>
       <Heading />
 
-      {/* <Portfolio /> */}
+      <Portfolio />
       
     </main>
   );

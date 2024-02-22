@@ -1,5 +1,5 @@
 # Portfolio page
 
-Was a temporary Portfolio Website for CECS 105... now work in progress
+Portfolio template in progress
 
 site is [frankmancia.com](https://frankmancia.com)
