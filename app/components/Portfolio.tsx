@@ -1,22 +1,19 @@
-import PortfolioContainer from "./Portfolio/PortfolioContainer"
+import PortfolioContainer from "./Portfolio/PortfolioContainer";
+import { PortfolioScrollType } from "./Portfolio/PortfolioScrollType";
 
-export default function Portfolio() {
-
+const Portfolio: React.FC<PortfolioScrollType> = ({ isAtTop }) => {
+    
     return (
-        <div className="h-screen min-w-screen"> 
-            
-            <div className="h-full">
-
-                <div className="m-h-1/4 pt-10 flex items-center justify-center">
-                    <p className="text-5xl">Portfolio</p>
-                </div>
-                
-                <div className="h-5/6">
-                    <PortfolioContainer />
-                </div>
-
+        <div className="portfolio_title h-screen min-w-screen relative" > 
+            <div className={`text-5xl mt-5 flex items-center justify-center sticky w-full top-5 ${isAtTop ? 'text-yellow-100' : ''}`}>
+                Portfolio
             </div>
-            
-        </div>
+            <div className="overflow-y-auto md:ml-8">
+                <PortfolioContainer />
+            </div>
+        </div>   
     )
+    
 }
+
+export default Portfolio;
