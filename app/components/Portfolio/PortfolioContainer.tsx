@@ -9,7 +9,7 @@ export default function PortfolioContainer()
 
             <PortfolioCard 
                 title={'Real Time Chat Application'} 
-                description={'Chat web application built with React.js, Node.js, and Socket.io. Deploys to AWS EC2 and s3 using Terraform through a CI/CD pipeline on GitLab.'} 
+                description={'Web app for real time chat rooms. Deploys to AWS through a CI/CD pipeline on GitLab.'} 
                 tools={['React.js', 'Node.js', 'Socket.io', 'Terraform', 'GitLab', 'AWS']} 
                 link={'https://gitlab.com/raaven/realtime-chat-fullstack'}
                 image={"/images/realtime-chat.png"}
@@ -17,7 +17,7 @@ export default function PortfolioContainer()
 
             <PortfolioCard 
                 title={'Campustalk'} 
-                description={'University student web forum for CSULB senior group project. Built with Node.js, React.js, and MySQL and deployed to a Google Cloud VM with Docker.'} 
+                description={'University student web forum for CSULB senior group project. Deployed to a Google Cloud VM with Docker containers for nginx, client, and backend.'} 
                 tools={['React.js', 'Node.js', 'GCP', 'MySQL', 'Docker']} 
                 link={'#'}
                 image={"/images/campustalk.png"}
