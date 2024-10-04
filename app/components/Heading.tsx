@@ -9,7 +9,7 @@ const Heading: React.FC = () => {
                 <a href="https://linkedin.com/in/frank-mancia" target="_blank"><TiSocialLinkedin fontSize={25} className="hover:text-yellow-300 md:fixed"/></a>
                 <a href="https://github.com/raav3n" target="_blank"><FaGithub fontSize={25} className="hover:text-yellow-300 md:fixed"/></a>
                 <a href="https://gitlab.com/raaven" target="_blank"><FaGitlab fontSize={25} className="hover:text-yellow-300 md:fixed"/></a>
-                <a href="/resume" target="_blank"><FaFilePdf fontSize={25} className="hover:text-yellow-300 md:fixed"/></a>
+                {/* <a href="/resume" target="_blank"><FaFilePdf fontSize={25} className="hover:text-yellow-300 md:fixed"/></a> */}
             </div>
 
             <div className="h-1/2 md:w-1/3 lg:1/2 flex items-center justify-center ">
