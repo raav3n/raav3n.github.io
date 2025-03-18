@@ -20,7 +20,7 @@ const Heading: React.FC = () => {
                 <p className='md:row-start-2 row-end-2 text-6xl ml-5 mt-10 md:ml-0 md:mt-0 md:mr-0 mr-1'>Hi,<br></br> I&#39;m <span className="text-yellow-100">Frank Mancia</span></p>
                 <div className="md:row-start-3 row-start-3 text-wrap m-5 md:ml-0 mb-5">
                     {/* <p className="text-3xl font-semibold mt-16 sm:mt-5 md:mt-10 lg:mt-0">About Me</p> */}
-                    <p className="text-xl mt-8">Information Security Analyst at CSU Chancellor Office. Interested in cybersecurity, cloud, and software development.</p>
+                    <p className="text-xl mt-8">Information Security Analyst. Interested in cybersecurity, cloud, and software development.</p>
                 </div>
             </div>
             
