@@ -1,18 +1,11 @@
-"use client";
-import Heading from "./components/Heading"
-import Portfolio from "./components/Portfolio"
-
-import { useState } from 'react'; 
+import Heading from "./components/Heading";
+import Projects from "./components/Projects";
 
 export default function Home() {
-  // const [isAtTop, setIsAtTop] = useState<boolean>(true);
-
   return (
     <main>
       <Heading />
-
-      {/* <Portfolio isAtTop={isAtTop} /> */}
-      
+      <Projects />
     </main>
   );
 }
